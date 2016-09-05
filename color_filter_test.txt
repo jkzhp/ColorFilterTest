@@ -1,0 +1,15 @@
+* color_filter_test.hdev
+
+read_image(imgOriginal, 'color_wheel.png')
+
+get_image_size(imgOriginal, imageWidth, imageHeight)
+
+dev_open_window(80, 500, imageWidth, imageHeight, 'black', windowHandle)
+
+decompose3(imgOriginal, imgRedChannel, imgGreenChannel, imgBlueChannel)
+
+trans_from_rgb(imgRedChannel, imgGreenChannel, imgBlueChannel, imgLum, imgA, imgB, 'cielab')
+
+trans_from_rgb(imgRedChannel, imgGreenChannel, imgBlueChannel, imgHue, imgSaturation, imgValue, 'hsv')
+
+

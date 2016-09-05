@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.1" halcon_version="12.0.2">
+<procedure name="main">
+<interface/>
+<body>
+<c>* color_filter_test.hdev</c>
+<c></c>
+<l>read_image(imgOriginal, 'color_wheel.png')</l>
+<c></c>
+<l>get_image_size(imgOriginal, imageWidth, imageHeight)</l>
+<c></c>
+<l>dev_open_window(80, 500, imageWidth, imageHeight, 'black', windowHandle)</l>
+<c></c>
+<l>decompose3(imgOriginal, imgRedChannel, imgGreenChannel, imgBlueChannel)</l>
+<c></c>
+<l>trans_from_rgb(imgRedChannel, imgGreenChannel, imgBlueChannel, imgLum, imgA, imgB, 'cielab')</l>
+<c></c>
+<l>trans_from_rgb(imgRedChannel, imgGreenChannel, imgBlueChannel, imgHue, imgSaturation, imgValue, 'hsv')</l>
+<c></c>
+<c></c>
+<c></c>
+</body>
+<docu id="main">
+<parameters/>
+</docu>
+</procedure>
+</hdevelop>
